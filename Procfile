@@ -1,1 +1,1 @@
-web: gunicorn djangorestapi.wsgi --logs-file -
+web: gunicorn main.wsgi --logs-file -

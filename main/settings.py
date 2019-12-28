@@ -125,4 +125,8 @@ REST_FRAMEWORK = {
     )
 }
 
+from datetime import timedelta
 
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME' : timedelta(hours=10)
+}

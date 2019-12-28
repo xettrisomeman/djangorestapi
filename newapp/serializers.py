@@ -11,12 +11,12 @@ class TheorySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Theory
-        fields = "__all__"
+        fields = ('id' , 'name','created' , 'based_on' , 'details' ,'related_url')
 
 
 class ScientistSerializer(serializers.ModelSerializer):
-
+    theories = TheorySerializer(many=True)
     class Meta:
         model = Scientist
-        fields = "__all__"
+        fields = ('id','first_name' , 'last_name' , 'date_of_birth' , 'birth_place' , 'death','theories')
 
